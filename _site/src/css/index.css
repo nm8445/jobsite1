@@ -1,0 +1,6 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+  
+    background: linear-gradient( rgba(123, 157, 156, .25) 35%, rgba(123, 157, 156, 0));
+  }
