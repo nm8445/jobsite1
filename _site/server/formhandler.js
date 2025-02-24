@@ -8,16 +8,19 @@ function button(){
             lastname: document.getElementById("Last-Name").value,
             email: document.getElementById("signupEmail").value,
             password: document.getElementById("signupPassword").value
-            
+    
         };
-         
+        console.log('This is the info grabbed from the form',formdata);
+        const data = JSON.stringify(formdata);
+        console.log('This is the data turned to json',data);
             // this is a fetch request which sends a post request with the json data to the endpoint /signup. the endpoint is what has the request so you need to pull it in the express file
-        const response = await fetch('/signup',{// calls the server at the url signup
-            method: 'POST',
+        const response = await fetch("http://localhost:3000/signup",{// must point to the express backend 
+            method: 'POST', // this is the request method
+            // request headers give the server information about the request. it tells the server the format of the request body
             headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json'// this is the request header
             },
-            body: JSON.stringify(formdata)
+            body: data// this is the request body
         });
         const result = await response.json();
         console.log(result);
