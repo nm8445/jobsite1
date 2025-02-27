@@ -52,6 +52,11 @@
   <body>
     {{ content | safe }}
   </body>
+  <form id="applyForm">
+    <!-- Hidden field to store job ID -->
+    <input type="hidden" id="jobId" value="{{ jobId }}">
+    <button type="submit">Apply for Job</button>
+</form>
       </div>
     </div>
 
