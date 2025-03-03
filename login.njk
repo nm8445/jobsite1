@@ -1,26 +1,25 @@
 ---
-layout : layouts/default.njk
+layout: layouts/default.njk
 title: Login Page
 ---
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
 <div class="card-container">
-<div class="card" style="max-width:40rem; width:100%; height: 250px;">
-  
-  <div class="card-body">
-<form id="loginform">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email Address</label>
-    <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div class="card">
+    <div class="card-body">
+      <form id="loginform">
+        <div class="form-group">
+          <label for="loginInputEmail">Email Address</label>
+          <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="loginInputPassword">Password</label>
+          <input type="password" class="form-control" id="loginInputPassword" placeholder="Password">
+        </div>
+    <button onclick="loginButton()" type="submit" class="btn login-button">Login</button>
+      </form>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="loginInputPassword" placeholder="Password">
-  </div>
-  <br>
-  <button onclick = "loginbutton()" type="submit" class="btn loginbutton text-dark" style = "max-width:40rem; width:100%;">Login</button>
-</form>
-</div>
-</div>
 </div>
