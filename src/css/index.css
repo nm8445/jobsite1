@@ -1,18 +1,54 @@
 .gradient-custom {
-    /* fallback for old browsers */
-  
-    background: linear-gradient( rgba(123, 157, 156, .25) 35%, rgba(123, 157, 156, 0));
-  }
+  background: linear-gradient(to bottom, rgba(123, 157, 156, 0.8) 0%, rgba(123, 157, 156, 0.2) 100%);
+}
 
-  .card-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    max-width: 40rem; 
-  }
+.card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 40rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
 
-.loginbutton{
-  background: linear-gradient( rgba(123, 157, 156, .25) 35%, rgba(123, 157, 156, 0));
+.login-button {
+  background: linear-gradient(to right, rgba(123, 157, 156, 1), rgba(123, 157, 156, 0.6));
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: rgba(123, 157, 156, 1);
+}
+
+.form-control {
+  border: 2px solid #7b9d9c;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 20px;
 }

@@ -1,0 +1,314 @@
+[
+    {
+      "title": "Softeng",
+      "location": "Ajax Ontario",
+      "details": [
+        "Design, develop, test, and deploy software solutions based on business requirements.",
+        "Collaborate with product managers, designers, and other engineers to deliver high-quality software.",
+        "Write clean, maintainable, and efficient code following best practices."
+      ],
+ 
+      "education": "Bachelor's Degree in Computer Science",
+      "salary": "$80,000 - $100,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "Scaffolder",
+      "location": "Whitby Ontario",
+      "details": [
+        "Assemble and dismantle scaffolding structures in accordance with industry safety standards.",
+        "Inspect scaffolding for stability and security before use.",
+        "Ensure scaffolding materials are transported and stored properly."
+      ],
+      "link": "../Jobs/Scaffolder",
+      "education": "High School Diploma or GED",
+      "salary": "$45,000 - $60,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "Trader",
+      "location": "Toronto Ontario",
+      "details": [
+        "Execute trades in financial markets, including stocks, bonds, currencies, and derivatives.",
+        "Monitor market trends, economic data, and financial news to identify profitable opportunities.",
+        "Analyze risk and implement strategies to mitigate potential losses."
+      ],
+      
+      "education": "Bachelor’s Degree in Finance or Economics",
+      "salary": "$100,000 - $150,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "Marketing-Manager",
+      "location": "Mississauga Ontario",
+      "details": [
+        "Develop, implement, and execute strategic marketing plans for an entire organization.",
+        "Lead and motivate a team of marketing professionals to achieve business goals.",
+        "Monitor market trends and oversee advertising and marketing activities to ensure the right message is delivered."
+      ],
+      "link": "../Jobs/MarketingMgr",
+      "education": "Master's Degree in Marketing",
+      "salary": "$90,000 - $120,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "CustomerServiceRepresentative",
+      "location": "Hamilton Ontario",
+      "details": [
+        "Handle customer inquiries, complaints, billing questions and payment extension/service requests.",
+        "Calm angry callers, repair trust, locate resources for problem resolution and design best-option solutions.",
+        "Interface daily with internal partners in accounting, field services, new business, operations and consumer affairs divisions."
+      ],
+      "link": "../Jobs/CustServRep",
+      "education": "Associate's Degree or College Diploma",
+      "salary": "$35,000 - $45,000",
+      "jobType": "Part Time"
+    },
+    {
+      "title": "ProjectManager",
+      "location": "Kitchener Ontario",
+      "details": [
+        "Coordinate internal resources and third parties/vendors for the flawless execution of projects.",
+        "Ensure that all projects are delivered on-time, within scope and within budget.",
+        "Develop project scopes and objectives, involving all relevant stakeholders and ensuring technical feasibility."
+      ],
+      "link": "../Jobs/ProjMgr",
+      "education": "Bachelor's Degree in Business Administration or related field",
+      "salary": "$75,000 - $95,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "GraphicDesigner",
+      "location": "Ottawa Ontario",
+      "details": [
+        "Conceptualize visuals based on requirements.",
+        "Prepare rough drafts and present ideas.",
+        "Develop illustrations, logos and other designs using software or by hand."
+      ],
+      "link": "../Jobs/GraphicDesigner",
+      "education": "Bachelor's Degree in Graphic Design",
+      "salary": "$50,000 - $70,000",
+      "jobType": "Freelance"
+    },
+    {
+      "title": "HRSpecialist",
+      "location": "Vancouver BC",
+      "details": [
+        "Recruit, screen, interview and place workers.",
+        "Handle employee relations, payroll, benefits, and training.",
+        "Plan, direct and coordinate the administrative functions of an organization."
+      ],
+      "link": "../Jobs/HRSpecialist",
+      "education": "Bachelor's Degree in Human Resources",
+      "salary": "$60,000 - $80,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "DataAnalyst",
+      "location": "Halifax Nova Scotia",
+      "details": [
+        "Interpret data, analyze results using statistical techniques and provide ongoing reports.",
+        "Develop and implement databases, data collection systems, data analytics and other strategies that optimize statistical efficiency and quality.",
+        "Acquire data from primary or secondary data sources and maintain databases/data systems."
+      ],
+      "link": "../Jobs/DataAnalyst",
+      "education": "Bachelor's Degree in Statistics or Mathematics",
+      "salary": "$70,000 - $90,000",
+      "jobType": "Full Time"
+    },
+    {
+      "title": "NetworkAdministrator",
+      "location": "Saskatoon Saskatchewan",
+      "details": [
+        "Maintain computer networks and systems including software, VPNs, routers and other physical hardware.",
+        "Install and configure network equipment to update or fix hardware or software issues.",
+        "Monitor computer systems to improve network performance for computer systems and networks."
+      ],
+      "link": "../Jobs/NetAdmin",
+      "education": "Associate's Degree in Network Administration",
+      "salary": "$65,000 - $85,000",
+      "jobType": "Full Time"
+    }, {
+        "title": "WebDeveloper",
+        "location": "Calgary Alberta",
+        "details": [
+          "Build and maintain websites and web applications.",
+          "Ensure the technical feasibility of UI/UX designs.",
+          "Optimize applications for maximum speed and scalability."
+        ],
+        "link": "../Jobs/WebDev",
+        "education": "Bachelor's Degree in Computer Science",
+        "salary": "$70,000 - $90,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "LegalAssistant",
+        "location": "Montreal Quebec",
+        "details": [
+          "Prepare legal documents and case briefs.",
+          "Assist attorneys in preparing for trials and court proceedings.",
+          "Organize and maintain documents in a paper or electronic filing system."
+        ],
+        "link": "../Jobs/LegalAsst",
+        "education": "Associate's Degree in Paralegal Studies",
+        "salary": "$40,000 - $55,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Business Analyst",
+        "location": "Winnipeg Manitoba",
+        "details": [
+          "Evaluate business processes, anticipate requirements, uncover areas for improvement.",
+          "Perform requirements analysis, document and communicate the results.",
+          "Effectively communicate insights and plans to cross-functional team members."
+        ],
+        "link": "../Jobs/BusinessAnalyst",
+        "education": "Bachelor's Degree in Business Administration",
+        "salary": "$65,000 - $85,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Sales Manager",
+        "location": "Regina Saskatchewan",
+        "details": [
+          "Achieve growth and hit sales targets by successfully managing the sales team.",
+          "Design and implement a strategic business plan that expands the company's customer base.",
+          "Present sales, revenue, and expenses reports and realistic forecasts to the management team."
+        ],
+        "link": "../Jobs/SalesMgr",
+        "education": "Master's Degree in Business Management",
+        "salary": "$80,000 - $100,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Content Writer",
+        "location": "Victoria BC",
+        "details": [
+          "Create content for blogs, articles, product descriptions, social media, and the company website.",
+          "Proofread content for errors and inconsistencies.",
+          "Edit and polish existing content to improve readability."
+        ],
+        "link": "../Jobs/ContentWriter",
+        "education": "Bachelor's Degree in English or Communications",
+        "salary": "$50,000 - $65,000",
+        "jobType": "Part Time"
+      },
+      {
+        "title": "Accountant",
+        "location": "Charlottetown PEI",
+        "details": [
+          "Prepare asset, liability, and capital account entries by compiling and analyzing account information.",
+          "Summarize current financial status by collecting information; preparing balance sheet, profit and loss statement, and other reports.",
+          "Audit documents and prepare financial statements that comply with laws, regulations, and accepted accounting principles."
+        ],
+        "link": "../Jobs/Accountant",
+        "education": "Bachelor's Degree in Accounting",
+        "salary": "$70,000 - $90,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Restaurant Manager",
+        "location": "St. John's Newfoundland",
+        "details": [
+          "Coordinate daily Front of the House and Back of the House restaurant operations.",
+          "Deliver superior service and maximize customer satisfaction.",
+          "Regularly review product quality and research new vendors."
+        ],
+        "link": "../Jobs/RestMgr",
+        "education": "Diploma in Hospitality or Culinary Management",
+        "salary": "$55,000 - $70,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "System Administrator",
+        "location": "Yellowknife NWT",
+        "details": [
+          "Install and configure software and hardware.",
+          "Manage network servers and technology tools.",
+          "Set up accounts and workstations."
+        ],
+        "link": "../Jobs/SysAdmin",
+        "education": "Bachelor's Degree in Information Technology or similar",
+        "salary": "$75,000 - $95,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Civil Engineer",
+        "location": "Fredericton New Brunswick",
+        "details": [
+          "Analyze survey reports, maps, and other data to plan projects.",
+          "Consider construction costs, government regulations, potential environmental hazards, and other factors in planning stages and risk analysis.",
+          "Oversee and analyze the results of soil testing to determine the adequacy and strength of foundations."
+        ],
+        "link": "../Jobs/CivilEng",
+        "education": "Bachelor's Degree in Civil Engineering",
+        "salary": "$80,000 - $100,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Pharmacist",
+        "location": "Iqaluit Nunavut",
+        "details": [
+          "Dispense prescription medications to patients and offer expertise in the safe use of prescriptions.",
+          "Review prescriptions to assure accuracy, to ascertain the needed ingredients, and to evaluate their suitability.",
+          "Provide information and advice regarding drug interactions, side effects, dosage, and proper medication storage."
+        ],
+        "link": "../Jobs/Pharmacist",
+        "education": "Doctorate in Pharmacy (Pharm.D.)",
+        "salary": "$100,000 - $120,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "UX/UI Designer",
+        "location": "Whitehorse Yukon",
+        "details": [
+          "Design and deliver wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interfaces.",
+          "Identify design problems and devise elegant solutions.",
+          "Make strategic design and user-experience decisions related to core, and new, functions and features."
+        ],
+        "link": "../Jobs/UXUIDesigner",
+        "education": "Bachelor's Degree in Design or related field",
+        "salary": "$75,000 - $90,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Security Analyst",
+        "location": "Moose Jaw Saskatchewan",
+        "details": [
+          "Monitor security incidents and provide thorough incident response analysis.",
+          "Ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure.",
+          "Respond to computer security breaches and viruses."
+        ],
+        "link": "../Jobs/SecurityAnalyst",
+        "education": "Bachelor's Degree in Information Security or related field",
+        "salary": "$70,000 - $85,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Event Planner",
+        "location": "Nanaimo British Columbia",
+        "details": [
+          "Coordinate all event activities and personnel.",
+          "Distribute all meeting information and supplies to attending personnel.",
+          "Plan and organize large scale events, including festivals, conferences, and weddings."
+        ],
+        "link": "../Jobs/EventPlanner",
+        "education": "Diploma in Event Management",
+        "salary": "$50,000 - $65,000",
+        "jobType": "Full Time"
+      },
+      {
+        "title": "Real Estate Agent",
+        "location": "Moncton New Brunswick",
+        "details": [
+          "Assist clients in buying, selling, and renting properties.",
+          "Advise clients on market conditions, prices, mortgages, legal requirements and related matters.",
+          "Promote sales through advertisements, open houses, and listing services."
+        ],
+        "link": "../Jobs/RealEstateAgent",
+        "education": "Certification in Real Estate",
+        "salary": "$60,000 - $80,000 based on commission",
+        "jobType": "Full Time"
+      }
+    ]
+  
