@@ -1,5 +1,5 @@
 .gradient-custom {
-  background: linear-gradient(to bottom, rgba(123, 157, 156, 0.8) 0%, rgba(123, 157, 156, 0.2) 100%);
+  background: linear-gradient(to bottom, rgba(11, 130, 97, 0.8) 0%, rgba(11, 130, 97, 0.2) 100%);
 }
 
 .card-container {
@@ -13,12 +13,14 @@
   border-radius: 8px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+  color: #3E2B2F;
 }
 
 .login-button {
-  background: linear-gradient(to right, rgba(123, 157, 156, 1), rgba(123, 157, 156, 0.6));
+  background: linear-gradient(to right, rgba(11, 130, 97, 1), rgba(11, 130, 97, 0.6));
   border: none;
-  color: white;
+  color: #FFFFFF;
   padding: 10px 20px;
   cursor: pointer;
   width: 100%;
@@ -29,11 +31,11 @@
 }
 
 .login-button:hover {
-  background: rgba(123, 157, 156, 1);
+  background: #3E2B2F;
 }
 
 .form-control {
-  border: 2px solid #7b9d9c;
+  border: 2px solid #0B8261;
   border-radius: 4px;
   padding: 10px;
   width: 100%;

@@ -2,6 +2,7 @@
 import cors from "cors";// cross origin request
 import express from 'express';
 import { dbconnect, User } from "./mongodb.js";
+import bcrypt from "bcryptjs";
 
 // constant that holds express
 const app = express();
@@ -18,7 +19,11 @@ dbconnect();
 // this is essentially how I grab the info from the endpoint.
 app.post('/signup', async(req,res)=>{
     try {
-        const {firstname,lastname,email,password} = req.body; // i deconstruct the json data (req.body)and assign each value to the local variables.
+        
+        const {firstname,lastname,email,password} = req.body; // I deconstruct the json data (req.body)and assign each value to the local variables.
+
+        
+
         const newUser = new User({
             firstname,
             lastname,
