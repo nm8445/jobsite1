@@ -1,4 +1,4 @@
-//using es modules instead of common js because the browser doesnt support it 
+// using es modules instead of common js because the browser doesnt support it 
 import cors from "cors";// cross origin request
 import express from 'express';
 import { dbconnect, User } from "./mongodb.js";
@@ -22,35 +22,44 @@ app.post('/signup', async(req,res)=>{
         
         const {firstname,lastname,email,password} = req.body; // I deconstruct the json data (req.body)and assign each value to the local variables.
 
+        // saltRounds determines how many times the password runs through the hashing algorithm   
+        const saltRounds = 7;
+        // Hash the password before saving
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
         
-
         const newUser = new User({
             firstname,
             lastname,
             email,
-            password,
+            // Store the hashed password
+            password: hashedPassword,
         })
         await newUser.save();
-        res.status(201).json({message:"user created successfully" + JSON.stringify(newUser) });
+        res.status(201).json({ message: "User created successfully" });
     } catch (error) {
         res.status(500).json({message:"error creating user", error: error.message });
     }
     
 });
 
-app.post('/login',async(req,res)=>{
-    const {email,password} = req.body; // the values of email and password from the fetch request are assigned to local variables
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
     try {
-        const user = await User.findOne({email}); // queries the database and pulls the entire document specific to the email entered.
-        if(!user){
-            return res.status(404).json({message:"The user with that email doesnt exist"}); // return stops function from executing is email doesnt exist
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(404).json({ message: "User with that email doesn't exist" });
         }
-        if (user.password === password) { // Replace with bcrypt comparison in production
+
+        // Compare entered password with stored hashed password
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (isMatch) {
             return res.status(200).json({ message: "Login successful!" });
         } else {
             return res.status(401).json({ message: "Invalid password" });
         }
     } catch (error) {
-        res.status(500).json({message:"error occured", error: error.message });
+        res.status(500).json({ message: "Error occurred", error: error.message });
     }
 });
