@@ -50,6 +50,8 @@
   color: #3E2B2F; 
 }
 
+
+
 .card-container {
   position: absolute;
   top: 50%;
@@ -80,6 +82,7 @@
 
 .login-button:hover {
   background: #3E2B2F;
+  color:#FFFFFF;
 }
 
 .form-control {
@@ -101,4 +104,78 @@ label {
 
 .card-body {
   padding: 20px;
+}
+
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+  color: #3E2B2F;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0B8261;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+section {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #FFFFFF;
+  color: #0B8261;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0B8261;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #3E2B2F;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #3E2B2F;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3E2B2F;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  color: #3E2B2F;
 }

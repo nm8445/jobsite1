@@ -1,71 +1,29 @@
 ---
-
-layout: layouts/default.njk  
-
-
-title: "Job Listings"        
-
-
-pagination:                  
- 
-  data: jobs                 
-  
-  size: 6                    
-  
-  alias: job                 
+layout: layouts/default.njk
+title: Home 
 ---
 
-<!-- Creates a container with margin at the top and bottom. -->
 <div class="container my-5">
-  <!-- Creates an ordered list for job posts with a bottom margin. -->
-  <ol id="job-posts" class="list-group mb-3">
-    <!-- Loops through the job listings on this page. -->
-    {% for job in pagination.items %}
-      <!-- Each job will be listed as an item in the list. -->
-      <li class="list-group-item">
-        <!-- Make the job title a clickable link to the job detail page. -->
-        <h5 class="mb-1"><a href="/Jobs/{{ job.title | slug }}/">{{ job.title }}</a></h5>
-        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
-        <p class="card-text">{{ job.location }}</p>
-        <!-- Shows the location of the job. -->
-        <div>
-          <!-- Creates an unordered list for additional job details. -->
-          <ul>
-            <!-- Loops through each detail of the job. -->
-            {% for detail in job.details %}
-            <!-- Displays each job detail as a list item. -->
-            <li>{{ detail }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
+    <header class="text-center mb-4">
+        <h1>Welcome to Durham College's Hired Portal</h1>
+        <p class="lead">Find job opportunities and take the next step in your career.</p>
+    </header>
 
-  <!-- Pagination Controls -->
-  <!-- Creates a navigation bar for the pagination controls. -->
-  <nav aria-label="Page navigation">
-    <!-- Creates a list for the pagination items, centered. -->
-    <ul id="pagination" class="pagination justify-content-center">
-      <!-- Checks if there is a previous page. -->
-      {% if pagination.href.previous %}
-        <li class="page-item">
-          <a class="page-link" href="{{ pagination.href.previous }}" aria-label="Previous">
-            <span aria-hidden="true">&laquo; Previous</span>
-            <!-- If there is a previous page, display the "Previous" link. -->
-          </a>
-        </li>
-      {% endif %}
+    <!-- Resume/Cover Letter Help -->
+    <section class="text-center mt-5">
+        <h2>Need Resume or Cover Letter Help?</h2>
+        <p>Get expert advice from Durham College's Career Development team.</p>
+        <a href="mailto:careerdevelopment@durhamcollege.ca?subject=Resume Assistance Request" class="btn btn-primary">
+        Book an Appointment
+        </a>
+    </section>
 
-      <!-- Checks if there is a next page. -->
-      {% if pagination.href.next %}
-        <li class="page-item">
-          <a class="page-link" href="{{ pagination.href.next }}" aria-label="Next">
-            <span aria-hidden="true">Next &raquo;</span>
-            <!-- If there is a next page, display the "Next" link. -->
-          </a>
-        </li>
-      {% endif %}
-    </ul>
-  </nav>
+    <!-- Career Resources -->
+    <section class="text-center mt-5">
+        <h2>Career Resources</h2>
+        <p>Boost your job search with these helpful resources.</p>
+        <a href="https://hired.durhamcollege.ca/content/documents/Link/Interviews%202021-2022(1).pdf" class="btn btn-secondary" target="_blank">
+            Interview Tips
+        </a>
+    </section>
 </div>

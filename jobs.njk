@@ -1,0 +1,71 @@
+---
+
+layout: layouts/default.njk  
+
+
+title: Job Listings      
+
+
+pagination:                  
+ 
+  data: jobs                 
+  
+  size: 6                    
+  
+  alias: job                 
+---
+
+<!-- Creates a container with margin at the top and bottom. -->
+<div class="container my-5">
+  <!-- Creates an ordered list for job posts with a bottom margin. -->
+  <ol id="job-posts" class="list-group mb-3">
+    <!-- Loops through the job listings on this page. -->
+    {% for job in pagination.items %}
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/{{ job.title | slug }}/">{{ job.title }}</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">{{ job.location }}</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            {% for detail in job.details %}
+            <!-- Displays each job detail as a list item. -->
+            <li>{{ detail }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <!-- Pagination Controls -->
+  <!-- Creates a navigation bar for the pagination controls. -->
+  <nav aria-label="Page navigation">
+    <!-- Creates a list for the pagination items, centered. -->
+    <ul id="pagination" class="pagination justify-content-center">
+      <!-- Checks if there is a previous page. -->
+      {% if pagination.href.previous %}
+        <li class="page-item">
+          <a class="page-link" href="{{ pagination.href.previous }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo; Previous</span>
+            <!-- If there is a previous page, display the "Previous" link. -->
+          </a>
+        </li>
+      {% endif %}
+
+      <!-- Checks if there is a next page. -->
+      {% if pagination.href.next %}
+        <li class="page-item">
+          <a class="page-link" href="{{ pagination.href.next }}" aria-label="Next">
+            <span aria-hidden="true">Next &raquo;</span>
+            <!-- If there is a next page, display the "Next" link. -->
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+</div>
