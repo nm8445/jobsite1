@@ -99,3 +99,55 @@ pagination:
     </ul>
   </nav>
 </div>
+
+<!-- Search and Filter Logic -->
+<script>
+  function filterJobs() {
+
+	  // Get the search query from the search bar
+    var searchQuery = document.getElementById('search-bar').value.toLowerCase();
+    var jobItems = document.querySelectorAll('.job-item');
+
+	  // Get the values of the selected filters
+    var jobTypeFilter = document.getElementById('type-filter').value.toLowerCase();
+    var educationFilter = document.getElementById('education-filter').value.toLowerCase();
+    var salaryFilter = document.getElementById('salary-filter').value;
+
+	  // Loop through each job item and check if it matches the filters
+    jobItems.forEach(function(job) {
+      var jobTitle = job.querySelector('h5').textContent.toLowerCase();
+      var jobType = job.getAttribute('data-type').toLowerCase();
+      var education = job.getAttribute('data-education').toLowerCase();
+      var salary = job.getAttribute('data-salary');
+
+      // Check if the job matches the search query and selected filters
+      var matchesSearch = jobTitle.includes(searchQuery);
+      var matchesType = !jobTypeFilter || jobType.includes(jobTypeFilter);
+      var matchesEducation = !educationFilter || education.includes(educationFilter);
+      var matchesSalary = !salaryFilter || matchesSalaryRange(salary, salaryFilter);
+	
+	    // If all the conditions are met, show the job; otherwise, hide it
+      if (matchesSearch && matchesType && matchesEducation && matchesSalary) {
+        job.style.display = 'block';
+      } else {
+        job.style.display = 'none';
+      }
+    });
+  }
+
+  // Function to match filter salary to the salary of the listed position
+  function matchesSalaryRange(jobSalary, filterSalary) {
+    if (!jobSalary) return false;
+    var salaryRange = filterSalary.split('-');
+    // Removes non-numeric characters
+    var jobSalaryValue = parseInt(jobSalary.replace(/\D/g, '')); 
+
+    // If the salary filter has a '+', only check if the job's salary is above the minimum
+    if (filterSalary.includes('+')) {
+      return jobSalaryValue >= parseInt(salaryRange[0]);
+      // Otherwise, ensure the salary is within the specified range (min and max)
+    } else {
+      return jobSalaryValue >= parseInt(salaryRange[0]) && jobSalaryValue <= parseInt(salaryRange[1]);
+    }
+  }
+</script>
