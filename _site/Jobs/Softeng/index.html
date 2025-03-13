@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary gradient-custom">
+      <div class="container">
+        <a class="navbar-brand text-dark"  >Job Hunt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filters
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="">Salary</a></li>
+                <li><a class="dropdown-item" href="">Education Level</a></li>
+                <li><a class="dropdown-item" href="">Job Type</a></li>  
+              </ul>
+            </li>    
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/signup">Sign Up</a>
+            </li> 
+            </ul>
+            
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h2>Job Title: Software Engineer</h2>
+<h3>Job Summary</h3>
+<p>We are seeking a skilled and motivated <strong>Software Engineer</strong> to join our dynamic team. The ideal candidate will be responsible for designing, developing, and maintaining high-quality software solutions. You will work collaboratively with cross-functional teams to deliver scalable and reliable applications that meet business needs.</p>
+<h3>Key Responsibilities</h3>
+<ul>
+<li>Design, develop, test, and deploy software solutions based on business requirements.</li>
+<li>Collaborate with product managers, designers, and other engineers to deliver high-quality software.</li>
+<li>Write clean, maintainable, and efficient code following best practices.</li>
+<li>Debug and resolve software defects and technical issues.</li>
+<li>Participate in code reviews to ensure code quality and maintainability.</li>
+<li>Develop and maintain technical documentation.</li>
+<li>Stay up-to-date with emerging technologies and industry trends.</li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li>Bachelor’s degree in Computer Science, Software Engineering, or a related field.</li>
+<li>Proven experience as a Software Engineer or in a similar role.</li>
+<li>Proficiency in one or more programming languages such as Python, Java, C++, or JavaScript.</li>
+<li>Experience with front-end and back-end development frameworks.</li>
+<li>Familiarity with databases, cloud computing, and DevOps practices.</li>
+<li>Strong problem-solving and analytical skills.</li>
+<li>Excellent communication and teamwork abilities.</li>
+<li>Ability to work in a fast-paced environment and manage multiple tasks effectively.</li>
+</ul>
+<h3>Preferred Qualifications</h3>
+<ul>
+<li>Experience with Agile development methodologies.</li>
+<li>Knowledge of CI/CD pipelines and version control systems such as Git.</li>
+<li>Understanding of software security best practices.</li>
+<li>Experience with containerization technologies like Docker and Kubernetes.</li>
+</ul>
+<h3>Benefits</h3>
+<ul>
+<li>Competitive salary and performance-based incentives.</li>
+<li>Comprehensive health, dental, and vision insurance.</li>
+<li>Flexible work schedule and remote work options.</li>
+<li>Professional development opportunities and training.</li>
+<li>Collaborative and inclusive company culture.</li>
+</ul>
+<h3>How to Apply</h3>
+<p>Please submit your resume and a cover letter outlining your relevant experience to [insert contact email or application portal link].</p>
+
+  </body>
+  <form id="applyForm">
+    <!-- Hidden field to store job ID -->
+    <input type="hidden" id="jobId" value="">
+    <button type="submit">Apply for Job</button>
+</form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/server/formhandler.js"></script>
+    <script src="/server/loginformhandler.js"></script>
+  </body>
+</html>

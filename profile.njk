@@ -1,0 +1,42 @@
+---
+layout: layouts/default.njk
+title: Profile 
+---
+
+<div class="card-container">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="text-center">Your Profile</h2>
+      <form id="profile-form">
+        
+        <!-- Display Name Information -->
+        <div class="row">
+          <div class="col">
+            <label for="First-Name">First Name</label>
+            <input type="text" class="form-control" id="First-Name" value="{{ user.firstName }}" placeholder="First name">
+          </div>
+          <div class="col">
+            <label for="Last-Name">Last Name</label>
+            <input type="text" class="form-control" id="Last-Name" value="{{ user.lastName }}" placeholder="Last name">
+          </div>
+        </div>
+        
+        <!-- Email Address Information -->
+        <div class="form-group">
+          <label for="Email">Email Address</label>
+          <input type="email" class="form-control" id="Email" value="{{ user.email }}" placeholder="Email Address">
+        </div>
+        
+        <!-- Password Information 
+            (This section is currently a work-in-progress as updating the password functionality has posed some challenges.)
+        -->
+        
+        <!-- Update Profile Button -->
+        <button type="submit" class="btn login-button" id="update-profile">Update Profile</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Link to profile.js -->
+<script src="/scripts/profile.js"></script>
