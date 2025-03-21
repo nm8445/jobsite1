@@ -1,6 +1,7 @@
 ---
 layout: layouts/default.njk
 title: MarketingManager
+showButton: true
 ---
 ## Job Title: **Marketing Manager**
 

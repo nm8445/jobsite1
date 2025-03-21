@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary gradient-custom">
+      <div class="container">
+        <a class="navbar-brand text-dark"  >Job Hunt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filters
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="">Salary</a></li>
+                <li><a class="dropdown-item" href="">Education Level</a></li>
+                <li><a class="dropdown-item" href="">Job Type</a></li>  
+              </ul>
+            </li>    
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a id ="navloginbutton" class="nav-link active text-dark" aria-current="page" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/signup">Sign Up</a>
+            </li> 
+            </ul>
+            
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h2>Job Title: <strong>Registered Nurse</strong></h2>
+<h3>Location: <strong>Barrie, Ontario</strong></h3>
+<h3>Job Summary</h3>
+<p>We are seeking a dedicated <strong>Registered Nurse (RN)</strong> to join our dynamic healthcare team. This role demands a deep commitment to providing exceptional patient care, with a focus on safety, effectiveness, and patient satisfaction.</p>
+<h3>Key Responsibilities</h3>
+<ul>
+<li><strong>Direct Patient Care:</strong> Provide comprehensive nursing care in a variety of settings. Perform assessments, administer medications, and monitor for adverse reactions.</li>
+<li><strong>Clinical Skills:</strong> Utilize a wide array of clinical skills to aid patient recovery and ensure comfort. Manage medical equipment and assist with procedures.</li>
+<li><strong>Patient Advocacy:</strong> Act as an advocate for the health and well-being of patients. Ensure that patient care plans are followed, advocating for the best possible outcomes.</li>
+<li><strong>Documentation:</strong> Maintain accurate, detailed reports and records of patient care, including observations, treatments performed, and medications administered.</li>
+<li><strong>Education and Support:</strong> Educate patients and their families on illness prevention and health maintenance. Provide emotional support and guidance to patients and family members.</li>
+</ul>
+<h3>Qualifications</h3>
+<ul>
+<li><strong>Education:</strong> Must have completed a bachelor's degree in Nursing from an accredited nursing program.</li>
+<li><strong>Licensing:</strong> A valid RN license to practice in Ontario.</li>
+<li><strong>Experience:</strong> Previous experience in nursing, particularly in a hospital or acute care setting, is highly valued.</li>
+<li><strong>Skills:</strong> Excellent communication and interpersonal skills. Strong ability to work collaboratively in a multidisciplinary team environment.</li>
+</ul>
+<h3>Benefits</h3>
+<ul>
+<li><strong>Competitive Salary:</strong> Attractive compensation package commensurate with experience.</li>
+<li><strong>Health Benefits:</strong> Comprehensive health insurance, including dental and vision coverage.</li>
+<li><strong>Professional Development:</strong> Opportunities for professional growth and continuing education.</li>
+<li><strong>Work-Life Balance:</strong> Flexible scheduling options to support work-life balance.</li>
+</ul>
+<h3>How to Apply</h3>
+<p>If you're passionate about making a difference in the lives of others and meet our qualifications, we would love to hear from you. Please apply through our <a href="../Jobs/Nurse">careers page</a>, where you can submit your resume and a cover letter detailing your experience and qualifications.</p>
+<h3>Contact Us</h3>
+<p>For more information about this position or other career opportunities, please contact our HR department at [insert contact email or phone number].</p>
+
+  </body>
+  <form id="applyForm">
+    <!-- Hidden field to store job ID -->
+    <input type="hidden" id="jobId" value="">
+    <button type="submit">Apply for Job</button>
+</form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/server/logout.js"></script>
+    <script src="/server/signupformhandler.js"></script>
+    <script src="/server/loginformhandler.js"></script>
+  </body>
+</html>

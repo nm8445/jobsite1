@@ -1,6 +1,7 @@
 ---
 layout : layouts/default.njk
 title: Legal Assistant
+showButton: true
 ---
 
 ## Job Title: Legal Assistant  

@@ -1,0 +1,339 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary gradient-custom">
+      <div class="container">
+        <a class="navbar-brand text-dark"  >Job Hunt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filters
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="">Salary</a></li>
+                <li><a class="dropdown-item" href="">Education Level</a></li>
+                <li><a class="dropdown-item" href="">Job Type</a></li>  
+              </ul>
+            </li>    
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a id ="navloginbutton" class="nav-link active text-dark" aria-current="page" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/signup">Sign Up</a>
+            </li> 
+            </ul>
+            
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Creates a container with margin at the top and bottom. -->
+<div class="container my-5"> 
+
+  <!-- Search Bar and Filters Section -->
+  <div class="d-flex justify-content-between mb-4">
+    <!-- Search Bar -->
+    <input id="search-bar" type="text" class="form-control w-50" placeholder="Search for jobs..." onkeyup="filterJobs()" />
+
+    <!-- Filter by Job Type -->
+    <select id="type-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Filter by Job Type</option>
+      <option value="Full-time">Full-time</option>
+      <option value="Part-time">Part-time</option>
+      <option value="Internship">Internship</option>
+      <option value="Contract">Contract</option>
+      <option value="Volunteer">Volunteer</option> <!-- Added Volunteer option -->
+    </select>
+
+    <!-- Filter by Education -->
+    <select id="education-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Filter by Education</option>
+      <option value="High School">High School</option>
+      <option value="College">College</option>
+      <option value="Bachelor's Degree">Bachelor's Degree</option>
+      <option value="Master's Degree">Master's Degree</option>
+      <option value="PhD">PhD</option>
+    </select>
+
+    <!-- Filter by Salary -->
+    <select id="salary-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Filter by Salary</option>
+      <option value="0-30000">$0 - $30,000</option>
+      <option value="30000-50000">$30,000 - $50,000</option>
+      <option value="50000-70000">$50,000 - $70,000</option>
+      <option value="70000+">$70,000+</option>
+    </select>
+  </div>
+
+  <!-- Creates an ordered list for job posts with a bottom margin. -->
+  <ol id="job-posts" class="list-group mb-3">
+    <!-- Loops through the job listings on this page. -->
+    
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/civil-engineer/">Civil Engineer</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">Fredericton New Brunswick</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Analyze survey reports, maps, and other data to plan projects.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Consider construction costs, government regulations, potential environmental hazards, and other factors in planning stages and risk analysis.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Oversee and analyze the results of soil testing to determine the adequacy and strength of foundations.</li>
+            
+          </ul>
+        </div>
+      </li>
+    
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/pharmacist/">Pharmacist</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">Iqaluit Nunavut</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Dispense prescription medications to patients and offer expertise in the safe use of prescriptions.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Review prescriptions to assure accuracy, to ascertain the needed ingredients, and to evaluate their suitability.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Provide information and advice regarding drug interactions, side effects, dosage, and proper medication storage.</li>
+            
+          </ul>
+        </div>
+      </li>
+    
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/uxui-designer/">UX/UI Designer</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">Whitehorse Yukon</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Design and deliver wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interfaces.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Identify design problems and devise elegant solutions.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Make strategic design and user-experience decisions related to core, and new, functions and features.</li>
+            
+          </ul>
+        </div>
+      </li>
+    
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/security-analyst/">Security Analyst</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">Moose Jaw Saskatchewan</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Monitor security incidents and provide thorough incident response analysis.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Respond to computer security breaches and viruses.</li>
+            
+          </ul>
+        </div>
+      </li>
+    
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/event-planner/">Event Planner</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">Nanaimo British Columbia</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Coordinate all event activities and personnel.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Distribute all meeting information and supplies to attending personnel.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Plan and organize large scale events, including festivals, conferences, and weddings.</li>
+            
+          </ul>
+        </div>
+      </li>
+    
+      <!-- Each job will be listed as an item in the list. -->
+      <li class="list-group-item">
+        <!-- Make the job title a clickable link to the job detail page. -->
+        <h5 class="mb-1"><a href="/Jobs/real-estate-agent/">Real Estate Agent</a></h5>
+        <!-- The job title becomes a clickable link, and the 'slug' function makes the title URL-friendly. -->
+        <p class="card-text">Moncton New Brunswick</p>
+        <!-- Shows the location of the job. -->
+        <div>
+          <!-- Creates an unordered list for additional job details. -->
+          <ul>
+            <!-- Loops through each detail of the job. -->
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Assist clients in buying, selling, and renting properties.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Advise clients on market conditions, prices, mortgages, legal requirements and related matters.</li>
+            
+            <!-- Displays each job detail as a list item. -->
+            <li>Promote sales through advertisements, open houses, and listing services.</li>
+            
+          </ul>
+        </div>
+      </li>
+    
+  </ol>
+
+  <!-- Pagination Controls -->
+  <!-- Creates a navigation bar for the pagination controls. -->
+  <nav aria-label="Page navigation">
+    <!-- Creates a list for the pagination items, centered. -->
+    <ul id="pagination" class="pagination justify-content-center">
+      <!-- Checks if there is a previous page. -->
+      
+        <li class="page-item">
+          <a class="page-link" href="/jobs/2/" aria-label="Previous">
+            <span aria-hidden="true">&laquo; Previous</span>
+            <!-- If there is a previous page, display the "Previous" link. -->
+          </a>
+        </li>
+      
+
+      <!-- Checks if there is a next page. -->
+      
+    </ul>
+  </nav>
+</div>
+
+<!-- Search and Filter Logic -->
+<script>
+  function filterJobs() {
+
+	  // Get the search query from the search bar
+    var searchQuery = document.getElementById('search-bar').value.toLowerCase();
+    var jobItems = document.querySelectorAll('.job-item');
+
+	  // Get the values of the selected filters
+    var jobTypeFilter = document.getElementById('type-filter').value.toLowerCase();
+    var educationFilter = document.getElementById('education-filter').value.toLowerCase();
+    var salaryFilter = document.getElementById('salary-filter').value;
+
+	  // Loop through each job item and check if it matches the filters
+    jobItems.forEach(function(job) {
+      var jobTitle = job.querySelector('h5').textContent.toLowerCase();
+      var jobType = job.getAttribute('data-type').toLowerCase();
+      var education = job.getAttribute('data-education').toLowerCase();
+      var salary = job.getAttribute('data-salary');
+
+      // Check if the job matches the search query and selected filters
+      var matchesSearch = jobTitle.includes(searchQuery);
+      var matchesType = !jobTypeFilter || jobType.includes(jobTypeFilter);
+      var matchesEducation = !educationFilter || education.includes(educationFilter);
+      var matchesSalary = !salaryFilter || matchesSalaryRange(salary, salaryFilter);
+	
+	    // If all the conditions are met, show the job; otherwise, hide it
+      if (matchesSearch && matchesType && matchesEducation && matchesSalary) {
+        job.style.display = 'block';
+      } else {
+        job.style.display = 'none';
+      }
+    });
+  }
+
+  // Function to match filter salary to the salary of the listed position
+  function matchesSalaryRange(jobSalary, filterSalary) {
+    if (!jobSalary) return false;
+    var salaryRange = filterSalary.split('-');
+    // Removes non-numeric characters
+    var jobSalaryValue = parseInt(jobSalary.replace(/\D/g, '')); 
+
+    // If the salary filter has a '+', only check if the job's salary is above the minimum
+    if (filterSalary.includes('+')) {
+      return jobSalaryValue >= parseInt(salaryRange[0]);
+      // Otherwise, ensure the salary is within the specified range (min and max)
+    } else {
+      return jobSalaryValue >= parseInt(salaryRange[0]) && jobSalaryValue <= parseInt(salaryRange[1]);
+    }
+  }
+</script>
+  </body>
+  <form id="applyForm">
+    <!-- Hidden field to store job ID -->
+    <input type="hidden" id="jobId" value="">
+    <button type="submit">Apply for Job</button>
+</form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/server/logout.js"></script>
+    <script src="/server/signupformhandler.js"></script>
+    <script src="/server/loginformhandler.js"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 ---
 layout: layouts/default.njk
 title: Human Resources Coordinator
+showButton: true
 ---
 ## Job Title: **Human Resources Coordinator**
 

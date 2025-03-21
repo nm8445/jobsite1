@@ -1,6 +1,7 @@
 ---
 layout: layouts/default.njk
 title: Registered Nurse
+showButton: true
 ---
 ## Job Title: **Registered Nurse**
 

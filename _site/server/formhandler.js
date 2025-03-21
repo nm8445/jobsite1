@@ -24,7 +24,7 @@ function button(){
             body: data// this is the request body
         });
         const result = await response.json();
-        console.log(result);
+        console.log("Result success:", result.success);
         const messageBox = document.getElementById("message-box");
          if (result.success) {
              messageBox.innerHTML = `<p style="color: green;">${result.message}</p>`;

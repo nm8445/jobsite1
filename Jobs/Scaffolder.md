@@ -1,6 +1,7 @@
 ---
 layout : layouts/default.njk
 title: Scaffolder
+showButton: true
 ---
 
 ## Job Title: Scaffolder

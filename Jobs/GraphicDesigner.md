@@ -1,6 +1,7 @@
 ---
 layout : layouts/default.njk
 title: Graphic Designer
+showButton: true
 ---
 
 ## Job Title: Graphic Designer  

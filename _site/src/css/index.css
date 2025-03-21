@@ -179,3 +179,11 @@ p {
   font-size: 1rem;
   color: #3E2B2F;
 }
+
+/* Adjust the height to account for the navbar */
+.centered-container {
+  height: calc(100vh - 56px); /* 56px is the default height of Bootstrap's navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

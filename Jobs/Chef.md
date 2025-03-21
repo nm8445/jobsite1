@@ -1,6 +1,7 @@
 ---
 layout: layouts/default.njk
 title: Chef
+showButton: true
 ---
 ## Job Title: **Chef**
 

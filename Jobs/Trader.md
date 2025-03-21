@@ -1,6 +1,7 @@
 ---
 layout : layouts/default.njk
 title: Trader
+showButton: true
 ---
 
 ## Job Title: Bank Trader

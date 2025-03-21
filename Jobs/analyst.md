@@ -1,6 +1,7 @@
 ---
 layout : layouts/default.njk
 title: Analyst
+showButton: true
 ---
 ## Job Title: Financial Risk Analyst  
 

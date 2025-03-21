@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary gradient-custom">
+      <div class="container">
+        <a class="navbar-brand text-dark"  >Job Hunt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filters
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="">Salary</a></li>
+                <li><a class="dropdown-item" href="">Education Level</a></li>
+                <li><a class="dropdown-item" href="">Job Type</a></li>  
+              </ul>
+            </li>    
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a id ="navloginbutton" class="nav-link active text-dark" aria-current="page" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="/signup">Sign Up</a>
+            </li> 
+            </ul>
+            
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h2>Job Title: <strong>Data Analyst</strong></h2>
+<h3>Location: <strong>Markham, Ontario</strong></h3>
+<h3>Job Summary</h3>
+<p>We are looking for a proactive <strong>Data Analyst</strong> to join our team. This role involves significant data interpretation and analysis to influence business decisions and strategies.</p>
+<h3>Key Responsibilities</h3>
+<ul>
+<li><strong>Data Collection and Analysis:</strong> Gather large datasets and conduct analyses to derive actionable insights.</li>
+<li><strong>Trend Spotting:</strong> Use statistical tools to identify trends and patterns that impact business outcomes.</li>
+<li><strong>Reporting:</strong> Develop comprehensive reports and visualizations to communicate findings to stakeholders.</li>
+</ul>
+<h3>How to Apply</h3>
+<p>To apply for this role and help shape our business strategy with your analytical skills, please visit our <a href="../Jobs/DataAnalyst">careers page</a>.</p>
+
+  </body>
+  
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/scripts/applyredirect.js"></script>
+    <script src="/server/logout.js"></script>
+    <script src="/server/signupformhandler.js"></script>
+    <script src="/server/loginformhandler.js"></script>
+  </body>
+</html>

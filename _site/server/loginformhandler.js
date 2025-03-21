@@ -11,27 +11,27 @@ function loginbutton(){
         console.log("this is the data turned into json",data);
 
         // fetch api sending a post request to the server endpoint
-        try {
-            
         const response = await fetch("http://localhost:3000/login/",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
             },
-            body: data
+            body: data,
+            credentials: 'include', // Include cookies
         });
         const result = await response.json();
-        console.log(result);
+        console.log("this is the result",result);
          // Display message on the frontend
          const messageBox = document.getElementById("message-box");
+         // if response is successful do 
          if (result.success) {
+             console.log("the line before the redirect");
+             window.location.href = 'http://localhost:8080/profile/';
              messageBox.innerHTML = `<p style="color: green;">${result.message}</p>`;
          } else {
              messageBox.innerHTML = `<p style="color: red;">${result.message}</p>`;
          }
-         } catch (error) {
-          console.error("Error:", error);
-
-    }
+         
     });
 };
+

@@ -1,6 +1,7 @@
 ---
 layout: layouts/default.njk
 title: Data Analyst
+showButton: true
 ---
 ## Job Title: **Data Analyst**
 

@@ -1,6 +1,7 @@
 ---
 layout : layouts/default.njk
 title: HR Specialist
+showButton: true
 ---
 
 ## Job Title: HR Specialist  
