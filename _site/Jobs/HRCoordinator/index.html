@@ -41,6 +41,11 @@
             <li class="nav-item">
               <a id ="navloginbutton" class="nav-link active text-dark" aria-current="page" href="/login">Login</a>
             </li>
+             <!-- Logout Button - initially hidden (href does not navigate to page rather on click will trigger logout)-->
+            <li class="nav-item" id="logoutItem" style="display: none;">
+              <a id="navlogoutbutton" class="nav-link active text-dark" 
+              aria-current="page" href="#" onclick="logout()">Logout</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link active text-dark" aria-current="page" href="/signup">Sign Up</a>
             </li> 

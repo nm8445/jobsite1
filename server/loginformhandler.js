@@ -25,7 +25,14 @@ function loginbutton(){
          const messageBox = document.getElementById("message-box");
          // if response is successful do 
          if (result.success) {
+             // Hide the login button and show the logout button
+             const logoutButton = document.getElementById("navlogoutbutton");
+             const loginButton = document.getElementById("navloginbutton");
+             loginButton.style.display = "none";  // Hide login button
+             logoutButton.style.display = "block"; // Show logout button
+
              console.log("the line before the redirect");
+             // Redirect to the profile page 
              window.location.href = 'http://localhost:8080/profile/';
              messageBox.innerHTML = `<p style="color: green;">${result.message}</p>`;
          } else {

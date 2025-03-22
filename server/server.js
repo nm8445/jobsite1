@@ -1,3 +1,5 @@
+// File: Server.js 
+
 // using es modules instead of common js because the browser doesnt support it
 import cors from "cors";// cross origin request
 import express from 'express';
@@ -121,6 +123,18 @@ app.get('/logout', async (req, res) => {
         }
     } else {
         res.status(401).json({ message: 'Not authenticated' });
+    }
+});
+
+
+// GET route to check if the user is logged in
+app.get('/check-loggedin', (req, res) => {
+    if (req.session.userId) {
+        // If userId exists in the session, return loggedin: true
+        return res.json({ loggedin: true });
+    } else {
+        // If userId doesn't exist in the session, return loggedin: false
+        return res.json({ loggedin: false });
     }
 });
 
