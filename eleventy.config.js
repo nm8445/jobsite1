@@ -9,3 +9,4 @@ export default function(eleventyConfig) {
     // Set nunjucks and Markdown as template formats
     eleventyConfig.setTemplateFormats(["md", "njk"]);
 }
+
