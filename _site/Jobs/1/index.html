@@ -68,6 +68,31 @@
   <div class="d-flex justify-content-between mb-4">
     <!-- Search Bar -->
     <input id="search-bar" type="text" class="form-control w-50" placeholder="Search for jobs..." onkeyup="searchBar()" />
+    
+    <!-- Filter by Job Type -->
+    <select id="job-type-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Select Job Type</option>
+      <option value="full time">Full Time</option>
+      <option value="part time">Part Time</option>
+    </select>
+
+    <!-- Filter by Education -->
+    <select id="education-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Select Education</option>
+      <option value="Bachelor's Degree in Accounting">Bachelor's Degree in Accounting</option>
+      <option value="Diploma in Hospitality or Culinary Management">Diploma in Hospitality or Culinary Management</option>
+      <option value="Bachelor's Degree in Information Technology or similar">Bachelor's Degree in IT</option>
+      <option value="Bachelor's Degree in Civil Engineering">Bachelor's Degree in Civil Engineering</option>
+      <option value="Doctorate in Pharmacy (Pharm.D.)">Doctorate in Pharmacy</option>
+      <option value="Bachelor's Degree in Design or related field">Bachelor's Degree in Design</option>
+      <option value="Bachelor's Degree in Information Security or related field">Bachelor's Degree in InfoSec</option>
+      <option value="Diploma in Event Management">Diploma in Event Management</option>
+      <option value="Certification in Real Estate">Certification in Real Estate</option>
+    </select>
+
+    <!-- Filter by Salary Range -->
+    <input id="salary-range" type="range" min="0" max="150000" step="1000" class="form-control w-25" onchange="filterJobs()" />
+    <span id="salary-range-value">Salary: $0 - $150,000</span>
   </div>
 
   <!-- Hidden list for all jobs (for search functionality) -->
@@ -77,74 +102,6 @@
 
   <!-- Creates an ordered list for job posts with a bottom margin. -->
   <ol id="job-posts" class="list-group mb-3">
-    
-      <li class="list-group-item job-item"
-          data-type="freelance"
-          data-education="bachelor&#39;s degree in graphic design"
-          data-salary="$50,000 - $70,000">
-        <h5 class="mb-1"><a href="/Jobs/graphicdesigner/">GraphicDesigner</a></h5>
-        <p class="card-text">Ottawa Ontario</p>
-        <ul>
-          
-            <li>Conceptualize visuals based on requirements.</li>
-          
-            <li>Prepare rough drafts and present ideas.</li>
-          
-            <li>Develop illustrations, logos and other designs using software or by hand.</li>
-          
-        </ul>
-      </li>
-    
-      <li class="list-group-item job-item"
-          data-type="full time"
-          data-education="bachelor&#39;s degree in human resources"
-          data-salary="$60,000 - $80,000">
-        <h5 class="mb-1"><a href="/Jobs/hrspecialist/">HRSpecialist</a></h5>
-        <p class="card-text">Vancouver BC</p>
-        <ul>
-          
-            <li>Recruit, screen, interview and place workers.</li>
-          
-            <li>Handle employee relations, payroll, benefits, and training.</li>
-          
-            <li>Plan, direct and coordinate the administrative functions of an organization.</li>
-          
-        </ul>
-      </li>
-    
-      <li class="list-group-item job-item"
-          data-type="full time"
-          data-education="bachelor&#39;s degree in statistics or mathematics"
-          data-salary="$70,000 - $90,000">
-        <h5 class="mb-1"><a href="/Jobs/dataanalyst/">DataAnalyst</a></h5>
-        <p class="card-text">Halifax Nova Scotia</p>
-        <ul>
-          
-            <li>Interpret data, analyze results using statistical techniques and provide ongoing reports.</li>
-          
-            <li>Develop and implement databases, data collection systems, data analytics and other strategies that optimize statistical efficiency and quality.</li>
-          
-            <li>Acquire data from primary or secondary data sources and maintain databases/data systems.</li>
-          
-        </ul>
-      </li>
-    
-      <li class="list-group-item job-item"
-          data-type="full time"
-          data-education="associate&#39;s degree in network administration"
-          data-salary="$65,000 - $85,000">
-        <h5 class="mb-1"><a href="/Jobs/networkadministrator/">NetworkAdministrator</a></h5>
-        <p class="card-text">Saskatoon Saskatchewan</p>
-        <ul>
-          
-            <li>Maintain computer networks and systems including software, VPNs, routers and other physical hardware.</li>
-          
-            <li>Install and configure network equipment to update or fix hardware or software issues.</li>
-          
-            <li>Monitor computer systems to improve network performance for computer systems and networks.</li>
-          
-        </ul>
-      </li>
     
       <li class="list-group-item job-item"
           data-type="full time"
@@ -176,6 +133,142 @@
             <li>Assist attorneys in preparing for trials and court proceedings.</li>
           
             <li>Organize and maintain documents in a paper or electronic filing system.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="bachelor&#39;s degree in business administration"
+          data-salary="$65,000 - $85,000">
+        <h5 class="mb-1"><a href="/Jobs/business-analyst/">Business Analyst</a></h5>
+        <p class="card-text">Winnipeg Manitoba</p>
+        <ul>
+          
+            <li>Evaluate business processes, anticipate requirements, uncover areas for improvement.</li>
+          
+            <li>Perform requirements analysis, document and communicate the results.</li>
+          
+            <li>Effectively communicate insights and plans to cross-functional team members.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="master&#39;s degree in business management"
+          data-salary="$80,000 - $100,000">
+        <h5 class="mb-1"><a href="/Jobs/sales-manager/">Sales Manager</a></h5>
+        <p class="card-text">Regina Saskatchewan</p>
+        <ul>
+          
+            <li>Achieve growth and hit sales targets by successfully managing the sales team.</li>
+          
+            <li>Design and implement a strategic business plan that expands the company&#39;s customer base.</li>
+          
+            <li>Present sales, revenue, and expenses reports and realistic forecasts to the management team.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="part time"
+          data-education="bachelor&#39;s degree in english or communications"
+          data-salary="$50,000 - $65,000">
+        <h5 class="mb-1"><a href="/Jobs/content-writer/">Content Writer</a></h5>
+        <p class="card-text">Victoria BC</p>
+        <ul>
+          
+            <li>Create content for blogs, articles, product descriptions, social media, and the company website.</li>
+          
+            <li>Proofread content for errors and inconsistencies.</li>
+          
+            <li>Edit and polish existing content to improve readability.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="bachelor&#39;s degree in accounting"
+          data-salary="$70,000 - $90,000">
+        <h5 class="mb-1"><a href="/Jobs/accountant/">Accountant</a></h5>
+        <p class="card-text">Charlottetown PEI</p>
+        <ul>
+          
+            <li>Prepare asset, liability, and capital account entries by compiling and analyzing account information.</li>
+          
+            <li>Summarize current financial status by collecting information; preparing balance sheet, profit and loss statement, and other reports.</li>
+          
+            <li>Audit documents and prepare financial statements that comply with laws, regulations, and accepted accounting principles.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="diploma in hospitality or culinary management"
+          data-salary="$55,000 - $70,000">
+        <h5 class="mb-1"><a href="/Jobs/restaurant-manager/">Restaurant Manager</a></h5>
+        <p class="card-text">St. John&#39;s Newfoundland</p>
+        <ul>
+          
+            <li>Coordinate daily Front of the House and Back of the House restaurant operations.</li>
+          
+            <li>Deliver superior service and maximize customer satisfaction.</li>
+          
+            <li>Regularly review product quality and research new vendors.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="bachelor&#39;s degree in information technology or similar"
+          data-salary="$75,000 - $95,000">
+        <h5 class="mb-1"><a href="/Jobs/system-administrator/">System Administrator</a></h5>
+        <p class="card-text">Yellowknife NWT</p>
+        <ul>
+          
+            <li>Install and configure software and hardware.</li>
+          
+            <li>Manage network servers and technology tools.</li>
+          
+            <li>Set up accounts and workstations.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="bachelor&#39;s degree in civil engineering"
+          data-salary="$80,000 - $100,000">
+        <h5 class="mb-1"><a href="/Jobs/civil-engineer/">Civil Engineer</a></h5>
+        <p class="card-text">Fredericton New Brunswick</p>
+        <ul>
+          
+            <li>Analyze survey reports, maps, and other data to plan projects.</li>
+          
+            <li>Consider construction costs, government regulations, potential environmental hazards, and other factors in planning stages and risk analysis.</li>
+          
+            <li>Oversee and analyze the results of soil testing to determine the adequacy and strength of foundations.</li>
+          
+        </ul>
+      </li>
+    
+      <li class="list-group-item job-item"
+          data-type="full time"
+          data-education="doctorate in pharmacy (pharm.d.)"
+          data-salary="$100,000 - $120,000">
+        <h5 class="mb-1"><a href="/Jobs/pharmacist/">Pharmacist</a></h5>
+        <p class="card-text">Iqaluit Nunavut</p>
+        <ul>
+          
+            <li>Dispense prescription medications to patients and offer expertise in the safe use of prescriptions.</li>
+          
+            <li>Review prescriptions to assure accuracy, to ascertain the needed ingredients, and to evaluate their suitability.</li>
+          
+            <li>Provide information and advice regarding drug interactions, side effects, dosage, and proper medication storage.</li>
           
         </ul>
       </li>

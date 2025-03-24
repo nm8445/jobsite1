@@ -68,6 +68,31 @@
   <div class="d-flex justify-content-between mb-4">
     <!-- Search Bar -->
     <input id="search-bar" type="text" class="form-control w-50" placeholder="Search for jobs..." onkeyup="searchBar()" />
+    
+    <!-- Filter by Job Type -->
+    <select id="job-type-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Select Job Type</option>
+      <option value="full time">Full Time</option>
+      <option value="part time">Part Time</option>
+    </select>
+
+    <!-- Filter by Education -->
+    <select id="education-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Select Education</option>
+      <option value="Bachelor's Degree in Accounting">Bachelor's Degree in Accounting</option>
+      <option value="Diploma in Hospitality or Culinary Management">Diploma in Hospitality or Culinary Management</option>
+      <option value="Bachelor's Degree in Information Technology or similar">Bachelor's Degree in IT</option>
+      <option value="Bachelor's Degree in Civil Engineering">Bachelor's Degree in Civil Engineering</option>
+      <option value="Doctorate in Pharmacy (Pharm.D.)">Doctorate in Pharmacy</option>
+      <option value="Bachelor's Degree in Design or related field">Bachelor's Degree in Design</option>
+      <option value="Bachelor's Degree in Information Security or related field">Bachelor's Degree in InfoSec</option>
+      <option value="Diploma in Event Management">Diploma in Event Management</option>
+      <option value="Certification in Real Estate">Certification in Real Estate</option>
+    </select>
+
+    <!-- Filter by Salary Range -->
+    <input id="salary-range" type="range" min="0" max="150000" step="1000" class="form-control w-25" onchange="filterJobs()" />
+    <span id="salary-range-value">Salary: $0 - $150,000</span>
   </div>
 
   <!-- Hidden list for all jobs (for search functionality) -->
@@ -80,102 +105,68 @@
     
       <li class="list-group-item job-item"
           data-type="full time"
-          data-education="bachelor&#39;s degree in business administration"
-          data-salary="$65,000 - $85,000">
-        <h5 class="mb-1"><a href="/Jobs/business-analyst/">Business Analyst</a></h5>
-        <p class="card-text">Winnipeg Manitoba</p>
+          data-education="bachelor&#39;s degree in design or related field"
+          data-salary="$75,000 - $90,000">
+        <h5 class="mb-1"><a href="/Jobs/uxui-designer/">UX/UI Designer</a></h5>
+        <p class="card-text">Whitehorse Yukon</p>
         <ul>
           
-            <li>Evaluate business processes, anticipate requirements, uncover areas for improvement.</li>
+            <li>Design and deliver wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interfaces.</li>
           
-            <li>Perform requirements analysis, document and communicate the results.</li>
+            <li>Identify design problems and devise elegant solutions.</li>
           
-            <li>Effectively communicate insights and plans to cross-functional team members.</li>
+            <li>Make strategic design and user-experience decisions related to core, and new, functions and features.</li>
           
         </ul>
       </li>
     
       <li class="list-group-item job-item"
           data-type="full time"
-          data-education="master&#39;s degree in business management"
-          data-salary="$80,000 - $100,000">
-        <h5 class="mb-1"><a href="/Jobs/sales-manager/">Sales Manager</a></h5>
-        <p class="card-text">Regina Saskatchewan</p>
+          data-education="bachelor&#39;s degree in information security or related field"
+          data-salary="$70,000 - $85,000">
+        <h5 class="mb-1"><a href="/Jobs/security-analyst/">Security Analyst</a></h5>
+        <p class="card-text">Moose Jaw Saskatchewan</p>
         <ul>
           
-            <li>Achieve growth and hit sales targets by successfully managing the sales team.</li>
+            <li>Monitor security incidents and provide thorough incident response analysis.</li>
           
-            <li>Design and implement a strategic business plan that expands the company&#39;s customer base.</li>
+            <li>Ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure.</li>
           
-            <li>Present sales, revenue, and expenses reports and realistic forecasts to the management team.</li>
+            <li>Respond to computer security breaches and viruses.</li>
           
         </ul>
       </li>
     
       <li class="list-group-item job-item"
-          data-type="part time"
-          data-education="bachelor&#39;s degree in english or communications"
+          data-type="full time"
+          data-education="diploma in event management"
           data-salary="$50,000 - $65,000">
-        <h5 class="mb-1"><a href="/Jobs/content-writer/">Content Writer</a></h5>
-        <p class="card-text">Victoria BC</p>
+        <h5 class="mb-1"><a href="/Jobs/event-planner/">Event Planner</a></h5>
+        <p class="card-text">Nanaimo British Columbia</p>
         <ul>
           
-            <li>Create content for blogs, articles, product descriptions, social media, and the company website.</li>
+            <li>Coordinate all event activities and personnel.</li>
           
-            <li>Proofread content for errors and inconsistencies.</li>
+            <li>Distribute all meeting information and supplies to attending personnel.</li>
           
-            <li>Edit and polish existing content to improve readability.</li>
+            <li>Plan and organize large scale events, including festivals, conferences, and weddings.</li>
           
         </ul>
       </li>
     
       <li class="list-group-item job-item"
           data-type="full time"
-          data-education="bachelor&#39;s degree in accounting"
-          data-salary="$70,000 - $90,000">
-        <h5 class="mb-1"><a href="/Jobs/accountant/">Accountant</a></h5>
-        <p class="card-text">Charlottetown PEI</p>
+          data-education="certification in real estate"
+          data-salary="$60,000 - $80,000 based on commission">
+        <h5 class="mb-1"><a href="/Jobs/real-estate-agent/">Real Estate Agent</a></h5>
+        <p class="card-text">Moncton New Brunswick</p>
         <ul>
           
-            <li>Prepare asset, liability, and capital account entries by compiling and analyzing account information.</li>
+            <li>Assist clients in buying, selling, and renting properties.</li>
           
-            <li>Summarize current financial status by collecting information; preparing balance sheet, profit and loss statement, and other reports.</li>
+            <li>Advise clients on market conditions, prices, mortgages, legal requirements and related matters.</li>
           
-            <li>Audit documents and prepare financial statements that comply with laws, regulations, and accepted accounting principles.</li>
-          
-        </ul>
-      </li>
-    
-      <li class="list-group-item job-item"
-          data-type="full time"
-          data-education="diploma in hospitality or culinary management"
-          data-salary="$55,000 - $70,000">
-        <h5 class="mb-1"><a href="/Jobs/restaurant-manager/">Restaurant Manager</a></h5>
-        <p class="card-text">St. John&#39;s Newfoundland</p>
-        <ul>
-          
-            <li>Coordinate daily Front of the House and Back of the House restaurant operations.</li>
-          
-            <li>Deliver superior service and maximize customer satisfaction.</li>
-          
-            <li>Regularly review product quality and research new vendors.</li>
-          
-        </ul>
-      </li>
-    
-      <li class="list-group-item job-item"
-          data-type="full time"
-          data-education="bachelor&#39;s degree in information technology or similar"
-          data-salary="$75,000 - $95,000">
-        <h5 class="mb-1"><a href="/Jobs/system-administrator/">System Administrator</a></h5>
-        <p class="card-text">Yellowknife NWT</p>
-        <ul>
-          
-            <li>Install and configure software and hardware.</li>
-          
-            <li>Manage network servers and technology tools.</li>
-          
-            <li>Set up accounts and workstations.</li>
+            <li>Promote sales through advertisements, open houses, and listing services.</li>
           
         </ul>
       </li>
@@ -193,12 +184,6 @@
         </li>
       
 
-      
-        <li class="page-item">
-          <a class="page-link" href="/jobs/3/" aria-label="Next">
-            <span aria-hidden="true">Next &raquo;</span>
-          </a>
-        </li>
       
     </ul>
   </nav>

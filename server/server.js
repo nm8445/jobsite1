@@ -68,7 +68,6 @@ app.post('/signup', async(req,res)=>{
 });
 
 
-
 /*
 Stepes needed to make a session.
 the user logs in(server verifies credentials)

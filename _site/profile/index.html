@@ -62,42 +62,176 @@
   </head>
   <body>
     
-<div class="card-container">
-  <div class="card">
-    <div class="card-body">
-      <h2 class="text-center">Your Profile</h2>
-      <form id="profile-form">
-        
-        <!-- Display Name Information -->
-        <div class="row">
-          <div class="col">
-            <label for="First-Name">First Name</label>
-            <input type="text" class="form-control" id="First-Name" value="" placeholder="First name">
+<div class="container mt-5">
+  <div class="row">
+    <!-- Profile Info Section  -->
+    <div class="col-md-6 d-flex flex-column">
+      <div class="card shadow-sm mb-3 flex-grow-1">
+        <div class="card-header">
+          <h4>Profile</h4>
+        </div>
+        <div class="card-body">
+          <h5 class="mb-4">Personal Information</h5>
+          <!-- Display Name Information -->
+          <div class="form-group mb-3">
+            <label for="First-Name" class="font-weight-bold">First Name</label>
+            <input type="text" class="form-control" id="First-Name" value="" placeholder="First name" disabled>
           </div>
-          <div class="col">
-            <label for="Last-Name">Last Name</label>
-            <input type="text" class="form-control" id="Last-Name" value="" placeholder="Last name">
+          <div class="form-group mb-3">
+            <label for="Last-Name" class="font-weight-bold">Last Name</label>
+            <input type="text" class="form-control" id="Last-Name" value="" placeholder="Last name" disabled>
+          </div>
+          <!-- Email Address Information -->
+          <div class="form-group mb-3">
+            <label for="Email" class="font-weight-bold">Email Address</label>
+            <input type="email" class="form-control" id="Email" value="" placeholder="Email Address" disabled>
+          </div>
+
+          <!-- Account Creation Date -->
+          <div class="form-group mb-3">
+            <label for="created-at" class="font-weight-bold">Account Created</label>
+            <input type="text" class="form-control" id="created-at" value="Invalid date" disabled>
+          </div>
+
+          <!-- Last Login Information -->
+          <div class="form-group mb-3">
+            <label for="last-login" class="font-weight-bold">Last Login</label>
+            <input type="text" class="form-control" id="last-login" value="Invalid date" disabled>
+          </div>
+
+          <!-- Profile Update Button -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary" id="update-profile">Update Profile</button>
           </div>
         </div>
-        
-        <!-- Email Address Information -->
-        <div class="form-group">
-          <label for="Email">Email Address</label>
-          <input type="email" class="form-control" id="Email" value="" placeholder="Email Address">
+      </div>
+    </div>
+
+    <!-- Certifications and Education Section -->
+    <div class="col-md-6 d-flex flex-column">
+      <!-- Editable Certifications Section -->
+      <div class="card shadow-sm mb-3 flex-grow-1">
+        <div class="card-header">
+          <h5>Add Your Certifications</h5>
         </div>
-        
-        <!-- Password Information 
-            (This section is currently a work-in-progress as updating the password functionality has posed some challenges.)
-        -->
-        
-        <!-- Update Profile Button -->
-        <button type="submit" class="btn login-button" id="update-profile">Update Profile</button>
-      </form>
+        <div class="card-body">
+          <form id="certifications-form">
+            <div class="form-group mb-3">
+              <label for="certification-title" class="font-weight-bold">Certification Title</label>
+              <input type="text" class="form-control" id="certification-title" placeholder="e.g. Certified Ethical Hacker">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="certification-issuer" class="font-weight-bold">Issuer</label>
+              <input type="text" class="form-control" id="certification-issuer" placeholder="e.g. EC-Council">
+            </div>
+
+            <!-- Add Certification Button -->
+            <div class="text-center">
+              <button type="button" class="btn btn-success" id="add-certification">Add Certification</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Certifications List -->
+      <div class="card shadow-sm mb-3 flex-grow-1">
+        <div class="card-header">
+          <h5>Certifications</h5>
+        </div>
+        <div class="card-body">
+          <div id="certifications-list"></div>
+        </div>
+      </div>
+
+      <!-- Editable Education Section -->
+      <div class="card shadow-sm mb-3 flex-grow-1">
+        <div class="card-header">
+          <h5>Add Your Education</h5>
+        </div>
+        <div class="card-body">
+          <form id="education-form">
+            <div class="form-group mb-3">
+              <label for="education-degree" class="font-weight-bold">Degree</label>
+              <input type="text" class="form-control" id="education-degree" placeholder="e.g. Bachelor of Science">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="education-school" class="font-weight-bold">School Name</label>
+              <input type="text" class="form-control" id="education-school" placeholder="e.g. University of Example">
+            </div>
+
+            <!-- Add Education Button -->
+            <div class="text-center">
+              <button type="button" class="btn btn-success" id="add-education">Add Education</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Education List -->
+      <div class="card shadow-sm mb-3 flex-grow-1">
+        <div class="card-header">
+          <h5>Education</h5>
+        </div>
+        <div class="card-body">
+          <div id="education-list"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- JavaScript to handle adding certifications and education -->
+<script>
+  // Handle adding certifications
+  document.getElementById('add-certification').addEventListener('click', function() {
+    const title = document.getElementById('certification-title').value;
+    const issuer = document.getElementById('certification-issuer').value;
 
+    if (title && issuer) {
+      const certificationHTML = `
+        <div class="card mt-3">
+          <div class="card-body">
+            <h6 class="font-weight-bold">${title}</h6>
+            <p class="text-muted">Issuer: ${issuer}</p>
+          </div>
+        </div>
+      `;
+      document.getElementById('certifications-list').insertAdjacentHTML('beforeend', certificationHTML);
+
+      // Clear form fields after adding the certification
+      document.getElementById('certification-title').value = '';
+      document.getElementById('certification-issuer').value = '';
+    } else {
+      alert("Please fill in all fields.");
+    }
+  });
+
+  // Handle adding education
+  document.getElementById('add-education').addEventListener('click', function() {
+    const degree = document.getElementById('education-degree').value;
+    const school = document.getElementById('education-school').value;
+
+    if (degree && school) {
+      const educationHTML = `
+        <div class="card mt-3">
+          <div class="card-body">
+            <h6 class="font-weight-bold">${degree}</h6>
+            <p class="text-muted">School: ${school}</p>
+          </div>
+        </div>
+      `;
+      document.getElementById('education-list').insertAdjacentHTML('beforeend', educationHTML);
+
+      // Clear form fields after adding the education
+      document.getElementById('education-degree').value = '';
+      document.getElementById('education-school').value = '';
+    } else {
+      alert("Please fill in all fields.");
+    }
+  });
+</script>
 
   </body>
   

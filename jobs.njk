@@ -3,7 +3,7 @@ layout: layouts/default.njk
 title: Job Listings      
 pagination:                  
   data: jobs                  
-  size: 6                    
+  size: 10                   
   alias: job                  
 ---
 <!-- Creates a container with margin at the top and bottom. -->
@@ -13,6 +13,31 @@ pagination:
   <div class="d-flex justify-content-between mb-4">
     <!-- Search Bar -->
     <input id="search-bar" type="text" class="form-control w-50" placeholder="Search for jobs..." onkeyup="searchBar()" />
+    
+    <!-- Filter by Job Type -->
+    <select id="job-type-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Select Job Type</option>
+      <option value="full time">Full Time</option>
+      <option value="part time">Part Time</option>
+    </select>
+
+    <!-- Filter by Education -->
+    <select id="education-filter" class="form-control w-25" onchange="filterJobs()">
+      <option value="">Select Education</option>
+      <option value="Bachelor's Degree in Accounting">Bachelor's Degree in Accounting</option>
+      <option value="Diploma in Hospitality or Culinary Management">Diploma in Hospitality or Culinary Management</option>
+      <option value="Bachelor's Degree in Information Technology or similar">Bachelor's Degree in IT</option>
+      <option value="Bachelor's Degree in Civil Engineering">Bachelor's Degree in Civil Engineering</option>
+      <option value="Doctorate in Pharmacy (Pharm.D.)">Doctorate in Pharmacy</option>
+      <option value="Bachelor's Degree in Design or related field">Bachelor's Degree in Design</option>
+      <option value="Bachelor's Degree in Information Security or related field">Bachelor's Degree in InfoSec</option>
+      <option value="Diploma in Event Management">Diploma in Event Management</option>
+      <option value="Certification in Real Estate">Certification in Real Estate</option>
+    </select>
+
+    <!-- Filter by Salary Range -->
+    <input id="salary-range" type="range" min="0" max="150000" step="1000" class="form-control w-25" onchange="filterJobs()" />
+    <span id="salary-range-value">Salary: $0 - $150,000</span>
   </div>
 
   <!-- Hidden list for all jobs (for search functionality) -->
